@@ -3,8 +3,11 @@ package Services;
 import Exceptions.GateNotFoundException;
 import Repositories.GateRepository;
 import Repositories.ParkingLotRepository;
+import Repositories.TicketRepository;
 import Repositories.VehicleRepository;
 import models.*;
+import strategies.SpotAssignmentStrategy;
+import strategies.SpotAssignmentStrategyFactory;
 
 import java.util.Date;
 import java.util.Optional;
@@ -13,6 +16,19 @@ public class TicketService {
     private GateRepository gateRepository;
     private VehicleRepository vehicleRepository;
     private ParkingLotRepository parkingLotRepository;
+    private TicketRepository ticketRepository;
+
+    public TicketService(GateRepository gateRepository,
+                         VehicleRepository vehicleRepository,
+                         ParkingLotRepository parkingLotRepository,
+                         TicketRepository ticketRepository
+                        ) {
+        this.gateRepository = gateRepository;
+        this.vehicleRepository = vehicleRepository;
+        this.parkingLotRepository = parkingLotRepository;
+        this.ticketRepository = ticketRepository;
+    }
+
     public Ticket issueTicket(VehicleType vehicleType,
                               String vehicleNumber,
                               String OwnerName,
@@ -63,8 +79,17 @@ public class TicketService {
         SpotAssignmentStrategyType spotAssignmentStrategyType =
                 parkingLotRepository.getParkingLotFromGate(gate).getSpotAssignmentStrategyType();
 
+        SpotAssignmentStrategy spotAssignmentStrategy = SpotAssignmentStrategyFactory.
+                getSpotForType(spotAssignmentStrategyType);
 
-        return null;
+        ticket.setParkingSpot(
+                spotAssignmentStrategy.getSpot(vehicleType)
+        );
+
+        Ticket savedTicket = ticketRepository.saveTicket(ticket);
+        ticket.setNumber("Ticket-"+ savedTicket.getId());
+
+        return savedTicket;
 
     }
 }

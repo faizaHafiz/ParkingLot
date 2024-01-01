@@ -8,6 +8,9 @@ import models.Ticket;
 
 public class TicketController {
     private TicketService ticketService;//instantiate through DI
+    public TicketController(TicketService ticketService){
+        this.ticketService = ticketService;
+    }
     public IssueTicketResponseDto issueTicket(IssueTicketRequestDto issueTicketRequestDto){
 
         IssueTicketResponseDto issueTicketResponseDto = new IssueTicketResponseDto();
