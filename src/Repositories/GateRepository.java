@@ -1,6 +1,7 @@
 package Repositories;
 
 import models.Gate;
+import models.GateType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +17,13 @@ public class GateRepository {
     // we have to go inside optional and check if gate is present or not
 
     private Map<Long,Gate> gates = new HashMap<>();
+
     public Optional<Gate> findByGateId(Long id){
+        Gate gate = new Gate();
+        gate.setGateNumber(1);
+        gate.setGateType(GateType.ENTRY);
+//        gate.setGateStatus(Gate);
+        gates.put(45L,gate);
         if(gates.containsKey(id)){
             return Optional.of(gates.get(id));
         }

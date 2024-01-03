@@ -29,13 +29,13 @@ public class Gate extends BaseModel{
         this.operator = operator;
     }
 
-    public GateStatus getGateStatus() {
-        return gateStatus;
-    }
-
-    public void setGateStatus(GateStatus gateStatus) {
-        this.gateStatus = gateStatus;
-    }
-
-    private GateStatus gateStatus;
+//    public GateStatus getGateStatus() {
+//        return gateStatus;
+//    }
+//
+//    public void setGateStatus(GateStatus gateStatus) {
+//        this.gateStatus = gateStatus;
+//    }
+//
+//    private GateStatus gateStatus;
 }

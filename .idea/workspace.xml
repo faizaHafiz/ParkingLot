@@ -5,17 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5074835f-75b8-4a9a-bfcd-c04afdbb1b91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Repositories/TicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/RandomSpotAssignmentStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/SpotAssignmentStrategyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositories/GateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/GateRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositories/ParkingLotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/ParkingLotRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/VehicleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/RandomSlotAssignmentStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/SlotAssignmentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/SpotAssignmentStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/SlotAssignmentStrategyFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Gate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/GateStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/GateStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/GateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/GateType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ParkingLotStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ParkingLotStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ParkingSpotStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ParkingSpotStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/VehicleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/VehicleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/RandomSpotAssignmentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/RandomSpotAssignmentStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/SpotAssignmentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/SpotAssignmentStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +48,35 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/intellij_projects/parkingLot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "E:/intellij_projects/parkingLot/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/intellij_projects/parkingLot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/intellij_projects/parkingLot/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="parkingLot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,10 +88,58 @@
       <workItem from="1702481092377" duration="4000" />
       <workItem from="1703855956812" duration="1263000" />
       <workItem from="1704096192283" duration="5753000" />
+      <workItem from="1704112341606" duration="9049000" />
+      <workItem from="1704260331689" duration="8090000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Services/TicketService.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controller/TicketController.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Services/TicketService.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Services/TicketService.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Services/TicketService.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Repositories/ParkingLotRepository.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Repositories/ParkingLotRepository.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

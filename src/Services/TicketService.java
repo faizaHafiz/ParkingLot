@@ -83,12 +83,12 @@ public class TicketService {
                 getSpotForType(spotAssignmentStrategyType);
 
         ticket.setParkingSpot(
-                spotAssignmentStrategy.getSpot(vehicleType)
+                spotAssignmentStrategy.getSpot(vehicleType,gate)
         );
 
         Ticket savedTicket = ticketRepository.saveTicket(ticket);
-        ticket.setNumber("Ticket-"+ savedTicket.getId());
-
+        //ticket.setNumber("Ticket-"+ savedTicket.getId());
+        savedTicket = ticketRepository.saveTicket(ticket);
         return savedTicket;
 
     }

@@ -1,4 +1,6 @@
 package models;
 
-public class ParkingSpotStatus {
+public enum ParkingSpotStatus {
+    EMPTY,
+    OCCUPIED
 }

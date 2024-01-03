@@ -1,9 +1,13 @@
 import Controller.TicketController;
+import DTO.IssueTicketRequestDto;
+import DTO.IssueTicketResponseDto;
 import Repositories.GateRepository;
 import Repositories.ParkingLotRepository;
 import Repositories.TicketRepository;
 import Repositories.VehicleRepository;
 import Services.TicketService;
+import models.Ticket;
+import models.VehicleType;
 
 import java.util.Scanner;
 
@@ -25,8 +29,39 @@ public class Main {
 
         TicketController ticketController = new TicketController(ticketService);
 
+
+
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the vehicle Owner Name");
+        String OwnerName = sc.next();
         System.out.println("Enter the vehicle number");
-//        ticketController.issueTicket();
+        String vehicleNumber = sc.next();
+        VehicleType vehicleType;
+        System.out.println("Select the vehicle Type -");
+        System.out.println("1. Two wheeler\n2. Four wheeler \n3. Truck \n4. Auto");
+        int vehicleTypeChoice = sc.nextInt();
+        switch (vehicleTypeChoice){
+            case 1: vehicleType = VehicleType.TWO_WHEELER;break;
+            case 2: vehicleType = VehicleType.FOUR_WHEELER;break;
+            case 3: vehicleType = VehicleType.TRUCK;break;
+            case 4: vehicleType = VehicleType.AUTO;break;
+            default: vehicleType = VehicleType.FOUR_WHEELER;
+        }
+
+        System.out.println("Enter the Gate ID");
+        Long gateId = sc.nextLong();
+
+
+        IssueTicketRequestDto requestDto = new IssueTicketRequestDto();
+        requestDto.setGateId(gateId);
+        requestDto.setVehicleNumber(vehicleNumber);
+        requestDto.setVehicleOwnerName(OwnerName);
+        requestDto.setVehicleType(vehicleType);
+
+        IssueTicketResponseDto issueTicketResponseDto ;
+        issueTicketResponseDto = ticketController.issueTicket(requestDto);
+
+        System.out.println("Your ticket number is " + issueTicketResponseDto.getTicket().getNumber());
+        //System.out.println("Your Entry time is " + issueTicketResponseDto.getTicket().getEntryTime());
     }
 }

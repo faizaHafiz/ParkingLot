@@ -29,6 +29,6 @@ public class TicketController {
         }
         issueTicketResponseDto.setResponseStatus(ResponseStatus.SUCCESS);
         issueTicketResponseDto.setTicket(ticket);
-        return null;
+        return issueTicketResponseDto;
     }
 }
